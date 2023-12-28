@@ -32,7 +32,7 @@ def schedule_notify():
     print(a)
 toast=ToastNotifier()
  #schedule for desktop niotification at every day 9AM    
-schedule.every().second.do(schedule_notify)
+schedule.every().day.at("09:00").do(schedule_notify)
 while True:
     schedule.run_pending()
     
